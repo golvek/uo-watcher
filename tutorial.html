@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #1c1c20;
+      color: #f0f0f3;
+      max-width: 520px;
+      margin: 40px auto;
+      padding: 24px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    h1 {
+      font-size: 20px;
+      color: #b19cd9;
+      margin: 0 0 24px 0;
+    }
+    .lang-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .lang-btn {
+      background: rgba(177,156,217,0.12);
+      border: 1px solid rgba(177,156,217,0.25);
+      color: #b19cd9;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .lang-btn:hover {
+      background: rgba(177,156,217,0.22);
+    }
+    h2 {
+      font-size: 15px;
+      color: #b19cd9;
+      margin: 28px 0 10px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .widget-preview {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 2px 10px;
+      background: #1a1a1e;
+      border-radius: 6px;
+      margin: 12px 0;
+    }
+    .w-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .w-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      opacity: 0.45;
+      font-weight: 500;
+      color: #ffffff;
+    }
+    .w-value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .w-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(177,156,217,0.12);
+    }
+    .color-orange { color: #FFB74D; }
+    .color-green { color: #81C784; }
+    .color-blue { color: #64B5F6; }
+    .color-white { color: #d4d4d8; }
+    .color-amber { color: #e8a87c; }
+    .color-red { color: #e05555; }
+    .color-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 6px;
+      flex-shrink: 0;
+    }
+    .dot-orange { background: #FFB74D; }
+    .dot-green { background: #81C784; }
+    .dot-blue { background: #64B5F6; }
+    .dot-amber { background: #e8a87c; }
+    .dot-red { background: #e05555; }
+    ul, ol {
+      padding-left: 18px;
+      margin: 8px 0;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #2a2a2e;
+      margin: 28px 0;
+    }
+    .tip {
+      background: rgba(177,156,217,0.08);
+      border-left: 3px solid #b19cd9;
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      margin: 12px 0;
+      font-size: 13px;
+    }
+    .widget-note {
+      font-size: 11px;
+      opacity: 0.5;
+      font-style: italic;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-bar">
+    <h1>How to Use the Timer</h1>
+    <a class="lang-btn" href="tutorial-pt.html">PT-BR</a>
+  </div>
+
+  <p>The timer helps you track time spent reviewing tasks. It starts counting down as soon as a task appears on screen.</p>
+
+  <h2>The Widget</h2>
+  <p>Here is what each number means (example: you just finished your first task):</p>
+
+  <div class="widget-preview">
+    <div class="w-section"><span class="w-label">Total</span><span class="w-value color-orange">3m</span></div>
+    <div class="w-section"><span class="w-label">Tasks</span><span class="w-value color-green">1</span></div>
+    <div class="w-section"><span class="w-label">Bank</span><span class="w-value color-blue">31s</span></div>
+    <div class="w-section"><span class="w-label">TIMER</span><span class="w-value color-white">211</span></div>
+  </div>
+
+  <h2>What Each Color Tells You</h2>
+  <ul>
+    <li><span class="color-dot dot-orange"></span><strong class="color-orange">Total</strong> — How long you have worked today. Goes up each time you click Submit.<br><em class="widget-note">Seconds appear in the extension popup.</em></li>
+    <li><span class="color-dot dot-green"></span><strong class="color-green">Tasks</strong> — How many tasks you have completed so far.</li>
+    <li><span class="color-dot dot-blue"></span><strong class="color-blue">Bank</strong> — Extra seconds you saved from finishing tasks early. The timer uses these first when it hits zero.</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h2>How It Works (Step by Step)</h2>
+  <ol>
+    <li>A task appears on screen → the timer starts counting down.</li>
+    <li>You review the task. When the timer hits <strong>zero</strong>, it starts using your time bank.</li>
+    <li>When the time bank runs out, the timer turns <strong>red</strong>.</li>
+    <li>You click <strong>Submit</strong> → leftover seconds go to your bank, tasks counter goes up, total work time updates.</li>
+    <li>The next task appears → timer resets and starts again.</li>
+  </ol>
+</body>
+</html>
